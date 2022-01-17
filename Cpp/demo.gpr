@@ -1,0 +1,20 @@
+project Demo is
+
+    for Source_Dirs use ("src");
+
+    for Object_Dir use "obj";
+
+    for Exec_Dir use "bin";
+
+    for Library_Dir use "lib";
+    for Library_Kind use "dynamic";
+
+    for Languages use ("C++");
+
+    for Main use 
+    (
+        "hello_world.cpp",
+        "main.cpp"
+    );
+
+end Demo;
