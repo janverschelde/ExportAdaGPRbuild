@@ -1,0 +1,10 @@
+aggregate project DemoLib is
+
+   for Project_Files use
+   (
+       "Ada/demolib.gpr",
+       "Cpp/demolib.gpr",
+       "Cpp/hellolib.gpr"
+   );
+
+end DemoLib;

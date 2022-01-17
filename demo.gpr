@@ -1,0 +1,9 @@
+aggregate project Demo is
+
+   for Project_Files use
+   (
+       "Ada/demo.gpr",
+       "Cpp/demo.gpr"
+   );
+
+end Demo;
