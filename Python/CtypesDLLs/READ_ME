@@ -1,0 +1,33 @@
+On Windows, getting the Microsoft Visual Studio compiler to
+use ddls made with gcc is hard.
+A simpler (and perhaps therefore even better) solution is to
+use the ctypes in Python.  This folder contains a simple test,
+requiring only the gnu-ada compiler and Python, not MSVC.
+
+The makefile contains the compilation instructions,
+which can be typed in at the command prompt,
+in case the make utility would not be installed.
+
+The usehello.c defines a simple test on using a function,
+compiled separately, and made available in a DLL file.
+
+Do "make hellofun.dll" and then "python testhello.py"
+or type in a Python shell:
+
+>>> import ctypes
+>>> d = ctypes("C:/Users/jan/Courses/MCS596/Fall22/PHCpy/MSVCgccDLLs/hellofun.dll")
+>>> d.hellofun()
+Hello world!
+0
+>>>
+
+The second step is to write a C function wrapper to
+an Ada procedure that prints hello world.
+The linking then has to happen with gnatlink, after making 
+the binding so the adahello can be called by a C function.
+
+This leads to the executable testadahello.
+
+The third and final step is then to adjust the link constructions
+and to make the helloadafun.dll, which can be imported in Python
+with the ctypes, as done in testadahello.py.
