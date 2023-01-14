@@ -1,5 +1,5 @@
 On Windows, getting the Microsoft Visual Studio compiler to
-use ddls made with gcc is hard.
+use dlls made with gcc is hard.
 A simpler (and perhaps therefore even better) solution is to
 use the ctypes in Python.  This folder contains a simple test,
 requiring only the gnu-ada compiler and Python, not MSVC.
